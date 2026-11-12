@@ -71,7 +71,7 @@ function replaceDeathSaveLayout(app, element) {
   const actor = app.actor;
   if (!supportsFiveDeathSaves(actor)) return;
 
-  const tray = element.querySelector(".death-tray");
+  const tray = element.matches?.(".death-tray") ? element : element.querySelector(".death-tray");
   const saves = tray?.querySelector(".death-saves");
   const rollButton = saves?.querySelector("button.death-save");
   if (!tray || !saves || !rollButton) return;
@@ -90,6 +90,16 @@ function replaceDeathSaveLayout(app, element) {
     rollButton.setAttribute("aria-disabled", String(terminal));
     if (terminal) rollButton.classList.remove("rollable");
   }
+}
+
+/**
+ * D&D5e character sheets use Foundry's ApplicationV2 framework. Listening to
+ * its base hook is more reliable than a system-specific render hook because
+ * it is dispatched for every V2 application in the inheritance chain.
+ */
+function onRenderApplicationV2(app, element) {
+  if (app.constructor?.name !== "CharacterActorSheet") return;
+  replaceDeathSaveLayout(app, element);
 }
 
 function onActorPreUpdate(actor, changes) {
@@ -165,5 +175,5 @@ Hooks.once("ready", () => {
   Hooks.on("preUpdateActor", onActorPreUpdate);
   Hooks.on("dnd5e.rollDeathSave", onDeathSave);
   Hooks.on("dnd5e.preRestCompleted", onPreRestCompleted);
-  Hooks.on("renderCharacterActorSheet", replaceDeathSaveLayout);
+  Hooks.on("renderApplicationV2", onRenderApplicationV2);
 });

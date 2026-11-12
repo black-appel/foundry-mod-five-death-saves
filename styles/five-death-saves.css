@@ -1,3 +1,13 @@
+.dnd5e2.sheet.actor.character .sheet-body .sidebar .card .death-tray.five-death-saves {
+  /* Match the taller custom layout so a closed tray leaves only its lip visible. */
+  --tray-height: calc(8.25rem + 4px);
+}
+
+.dnd5e2.sheet.actor.character .sheet-body .sidebar .card .death-tray.five-death-saves.open {
+  /* Align the expanded tray a few pixels lower than D&D5e's default position. */
+  top: calc(100% - 6px);
+}
+
 .dnd5e2 .death-tray.five-death-saves .death-saves {
   display: flex;
   flex-direction: column;

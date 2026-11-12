@@ -15,19 +15,21 @@ Ein privates Foundry-VTT-Modul für die Homebrew-Regel „Five Death Saves“.
 - Eine kurze oder lange Rast setzt die Misserfolge zurück.
 - Eine natürliche 1 zählt als zwei Misserfolge; eine natürliche 20 belebt mit 1 TP wieder. Bereits gesammelte Homebrew-Misserfolge bleiben bis zur Rast bestehen.
 
-Das Modul betrifft in Version 0.1 ausschließlich Spielercharaktere (`character`).
+Das Modul betrifft ausschließlich Spielercharaktere (`character`).
 
 ## Darstellung
 
 Im ausklappbaren Todesrettungswurf-Bereich des offiziellen D&D5e-Charakterbogens stehen die drei Erfolge oberhalb des bekannten Würfelknopfs; darunter erscheinen fünf Misserfolge.
 
-## Entwicklung
+## Lokale Entwicklung
 
 ```sh
 npm test
 ```
 
 Zum lokalen Testen muss dieser Projektordner als `five-death-saves` in Foundrys Modulordner liegen oder dorthin verlinkt werden. Anschließend Foundry neu laden und das Modul in der Welt aktivieren.
+
+Die hiesige Foundry-Installation nutzt einen symbolischen Link auf diesen Projektordner. Das ist für die Entwicklung gewollt: Änderungen sind nach einem Reload sofort sichtbar. Den Foundry-Updater in dieser Installation nicht für dieses Modul verwenden, da er den Link durch eine heruntergeladene Kopie ersetzen kann.
 
 ## Installation und Updates
 
