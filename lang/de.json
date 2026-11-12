@@ -1,0 +1,13 @@
+{
+  "five-death-saves": {
+    "tracker": {
+      "successes": "Todesrettungswurf-Erfolge: {count} von {maximum}",
+      "failures": "Todesrettungswurf-Misserfolge: {count} von {maximum}",
+      "successesPip": "Erfolg {number} von {maximum}",
+      "failuresPip": "Misserfolg {number} von {maximum}"
+    },
+    "notifications": {
+      "requiresDnd5e": "Five Death Saves benötigt das Spielsystem D&D5e."
+    }
+  }
+}

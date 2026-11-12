@@ -1,0 +1,49 @@
+.dnd5e2 .death-tray.five-death-saves .death-saves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 8.25rem;
+  padding: 0.45rem 0.55rem;
+}
+
+.dnd5e2 .death-tray.five-death-saves .fds-pips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 1.2rem;
+}
+
+.dnd5e2 .death-tray.five-death-saves .fds-pips .pip {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 0.92rem;
+  block-size: 0.92rem;
+  border: 2px solid var(--dnd5e-color-gold, #c9a86a);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0.2rem rgb(0 0 0 / 70%);
+}
+
+.dnd5e2 .death-tray.five-death-saves .fds-pips .pip.filled.successes {
+  background: var(--dnd5e-color-gold, #c9a86a);
+}
+
+.dnd5e2 .death-tray.five-death-saves .fds-pips .pip.filled.failures {
+  background: #9e3027;
+  border-color: #d35a4d;
+}
+
+.dnd5e2 .death-tray.five-death-saves .death-save {
+  order: 0;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  margin: 0.05rem 0;
+}
+
+.dnd5e2 .death-tray.five-death-saves .death-save[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

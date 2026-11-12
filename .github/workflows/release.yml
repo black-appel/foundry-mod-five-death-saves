@@ -1,0 +1,37 @@
+name: Package Foundry release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    name: Test and attach release assets
+    if: github.event.release.prerelease == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - name: Test the release
+        run: npm test
+      - name: Validate release version
+        run: node scripts/validate-release.mjs "${{ github.event.release.tag_name }}"
+      - name: Create Foundry archive
+        run: |
+          mkdir -p dist
+          cp module.json dist/module.json
+          zip -r dist/five-death-saves.zip module.json scripts styles lang README.md CHANGELOG.md
+      - name: Attach assets to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          gh release upload "$RELEASE_TAG" \
+            dist/module.json#module.json \
+            dist/five-death-saves.zip#five-death-saves.zip \
+            --clobber

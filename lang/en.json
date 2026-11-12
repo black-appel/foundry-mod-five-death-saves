@@ -1,0 +1,13 @@
+{
+  "five-death-saves": {
+    "tracker": {
+      "successes": "Death save successes: {count} of {maximum}",
+      "failures": "Death save failures: {count} of {maximum}",
+      "successesPip": "Success {number} of {maximum}",
+      "failuresPip": "Failure {number} of {maximum}"
+    },
+    "notifications": {
+      "requiresDnd5e": "Five Death Saves requires the D&D5e game system."
+    }
+  }
+}
