@@ -4,10 +4,10 @@
   "description": "Ersetzt die drei Todesrettungswurf-Misserfolge des D&D5e-Systems durch fünf Misserfolge und zeigt sie im Charakterbogen an.",
   "authors": [
     {
-      "name": "Lukas"
+      "name": "black-appel"
     }
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "14.367",
     "verified": "14"
@@ -18,15 +18,15 @@
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
-          "minimum": "6.1.0",
-          "verified": "6.1.0"
+          "minimum": "6.0.6",
+          "verified": "6.0.6"
         }
       }
     ]
   },
   "url": "https://github.com/black-appel/foundry-mod-five-death-saves",
   "manifest": "https://github.com/black-appel/foundry-mod-five-death-saves/releases/latest/download/module.json",
-  "download": "https://github.com/black-appel/foundry-mod-five-death-saves/releases/download/v0.1.0/five-death-saves.zip",
+  "download": "https://github.com/black-appel/foundry-mod-five-death-saves/releases/download/v0.1.1/five-death-saves.zip",
   "changelog": "https://github.com/black-appel/foundry-mod-five-death-saves/releases",
   "esmodules": [
     "scripts/five-death-saves.mjs"

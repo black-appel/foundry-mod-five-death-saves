@@ -5,7 +5,7 @@ Ein privates Foundry-VTT-Modul für die Homebrew-Regel „Five Death Saves“.
 ## Unterstützte Versionen
 
 - Foundry VTT 14.367 oder neuer innerhalb von V14
-- D&D5e-System 6.1.0
+- D&D5e-System 6.0.6 oder neuer innerhalb der Hauptversion 6
 
 ## Regelverhalten
 

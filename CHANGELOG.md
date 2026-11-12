@@ -2,6 +2,13 @@
 
 Alle bemerkenswerten Änderungen an diesem Modul werden in diesem Dokument festgehalten.
 
+## [0.1.1] - 2026-11-12
+
+### Geändert
+
+- D&D5e-Kompatibilität auf die geprüfte Version 6.0.6 gesenkt.
+- Publisher im Modulmanifest auf `black-appel` gesetzt.
+
 ## [0.1.0] - 2026-11-12
 
 ### Hinzugefügt
