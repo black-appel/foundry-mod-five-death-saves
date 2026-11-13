@@ -2,6 +2,18 @@ export const MODULE_ID = "five-death-saves";
 export const MAX_SUCCESSES = 3;
 export const MAX_FAILURES = 5;
 
+/**
+ * Resolve the automatic-down-failure rule from an actor's stored flag and an
+ * optional Active Effect override. Effects are given precedence so an item can
+ * temporarily opt a character out of the rule.
+ */
+export function autoDownFailureEnabled({ stored, override } = {}) {
+  const value = override ?? stored;
+  if (value === undefined || value === null || value === "") return true;
+  if (typeof value === "string") return !["false", "0", "off", "no"].includes(value.toLowerCase());
+  return Boolean(value);
+}
+
 /** Clamp a tracker value to its valid integer range. */
 export function clampTrackerValue(value, maximum) {
   const number = Number(value);

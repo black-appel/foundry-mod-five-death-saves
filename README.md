@@ -21,6 +21,18 @@ Das Modul betrifft ausschließlich Spielercharaktere (`character`).
 
 Im ausklappbaren Todesrettungswurf-Bereich des offiziellen D&D5e-Charakterbogens stehen die drei Erfolge oberhalb des bekannten Würfelknopfs; darunter erscheinen fünf Misserfolge.
 
+Nur die Spielleitung kann die Punkte direkt anklicken und damit setzen. Ein Klick auf den derzeit höchsten ausgefüllten Punkt zieht einen Punkt ab. Das kleine Zahnrad unten rechts öffnet außerdem eine Konfiguration für beide Zähler und die automatische Niederlage-Regel.
+
+## Charakter-Flag und Items
+
+Der automatische Misserfolg beim Fallen auf 0 TP ist pro Charakter standardmäßig aktiv und wird in `flags.five-death-saves.autoDownFailure` gespeichert. Ein Active Effect eines Items kann die Regel temporär übersteuern:
+
+- Schlüssel: `flags.five-death-saves.autoDownFailure`
+- Modus: **Override**
+- Wert: `false`
+
+Die aktive Item-Regel hat Vorrang vor der gespeicherten Charaktereinstellung. Entfernt man das Item oder deaktiviert den Effekt, gilt wieder die Charaktereinstellung. Damit kann etwa ein Schutzgegenstand den automatischen Misserfolg ausschalten.
+
 ## Lokale Entwicklung
 
 ```sh

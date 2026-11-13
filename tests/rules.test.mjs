@@ -1,7 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { applyDeathSave, systemFailureValue } from "../scripts/rules.mjs";
+import { applyDeathSave, autoDownFailureEnabled, systemFailureValue } from "../scripts/rules.mjs";
+
+test("an Active Effect override can disable the automatic down failure", () => {
+  assert.equal(autoDownFailureEnabled({}), true);
+  assert.equal(autoDownFailureEnabled({ stored: false }), false);
+  assert.equal(autoDownFailureEnabled({ stored: true, override: "false" }), false);
+  assert.equal(autoDownFailureEnabled({ stored: false, override: "true" }), true);
+});
 
 test("the third success stabilizes a character", () => {
   const result = applyDeathSave({ successes: 2, failures: 2, isSuccess: true });

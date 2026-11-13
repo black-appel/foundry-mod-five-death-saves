@@ -4,7 +4,18 @@
       "successes": "Todesrettungswurf-Erfolge: {count} von {maximum}",
       "failures": "Todesrettungswurf-Misserfolge: {count} von {maximum}",
       "successesPip": "Erfolg {number} von {maximum}",
-      "failuresPip": "Misserfolg {number} von {maximum}"
+      "failuresPip": "Misserfolg {number} von {maximum}",
+      "setSuccesses": "Erfolge auf {value} setzen",
+      "setFailures": "Misserfolge auf {value} setzen"
+    },
+    "configuration": {
+      "button": "Five Death Saves konfigurieren",
+      "title": "Five Death Saves konfigurieren",
+      "successes": "Todesrettungswurf-Erfolge",
+      "failures": "Todesrettungswurf-Misserfolge",
+      "autoDownFailure": "Automatischer Misserfolg bei 0 TP",
+      "autoDownFailureHint": "Kann durch einen Active Effect mit dem Flag flags.five-death-saves.autoDownFailure überschrieben werden.",
+      "save": "Speichern"
     },
     "notifications": {
       "requiresDnd5e": "Five Death Saves benötigt das Spielsystem D&D5e."

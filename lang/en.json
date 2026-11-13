@@ -4,7 +4,18 @@
       "successes": "Death save successes: {count} of {maximum}",
       "failures": "Death save failures: {count} of {maximum}",
       "successesPip": "Success {number} of {maximum}",
-      "failuresPip": "Failure {number} of {maximum}"
+      "failuresPip": "Failure {number} of {maximum}",
+      "setSuccesses": "Set successes to {value}",
+      "setFailures": "Set failures to {value}"
+    },
+    "configuration": {
+      "button": "Configure Five Death Saves",
+      "title": "Configure Five Death Saves",
+      "successes": "Death save successes",
+      "failures": "Death save failures",
+      "autoDownFailure": "Automatic failure at 0 HP",
+      "autoDownFailureHint": "Can be overridden by an Active Effect using the flags.five-death-saves.autoDownFailure flag.",
+      "save": "Save"
     },
     "notifications": {
       "requiresDnd5e": "Five Death Saves requires the D&D5e game system."
